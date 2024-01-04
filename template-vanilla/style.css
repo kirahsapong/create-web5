@@ -1,0 +1,148 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  all: unset;
+  font: inherit;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+/* Styles */
+body {
+  background: #000;
+  color: #fff;
+  font-family: monospace;
+}
+
+a {
+  color: #24f2ff;
+}
+
+button {
+  background-color: #24f2ff;
+  color: #000;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1 > span {
+  color: #ffec18;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+code {
+  background: rgb(41, 44, 44);
+  border: 1px solid rgb(80, 92, 93);
+  padding: 2px 4px;
+}
+
+#app,
+header,
+main,
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app {
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+main {
+  justify-content: space-between;
+  gap: 4rem;
+  margin-block-end: 2rem;
+  text-align: center;
+}
+
+main > p {
+  color: #707e7f;
+}
+
+#card {
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+#list {
+  max-width: calc(100vw - 4rem);
+}
+
+#list > ul {
+  list-style-type: none;
+  width: 100%;
+  max-width: 898px;
+  background: #181819;
+  padding: 1rem;
+  margin-block: 1rem;
+  border-radius: 4px;
+  text-align: start;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+#list > ul > li > p > span:first-child {
+  color: #f70cf7;
+  font-weight: bold;
+}

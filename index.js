@@ -48,7 +48,7 @@ async function init() {
       const pkg = require(path.join(templateDir, `package.json`))
       pkg.name = path.basename(root)
       await write(file, JSON.stringify(pkg, null, 2))
-    } else if (file === 'web5.js' && (argv.s || argv.sync || argv.e || argv.endpoint)) {
+    } else if (file === 'web5-utils.js' && (argv.s || argv.sync || argv.e || argv.endpoint)) {
       if (argv.s && argv.sync) {
         console.error(`Error: illegal options: specify either -s or --sync, not both.`)
         process.exit(1)
@@ -57,7 +57,7 @@ async function init() {
         console.error(`Error: illegal options: specify either -e or --endpoint, not both.`)
         process.exit(1)
       }
-      fs.readFile(path.join(templateDir, `web5.js`), 'utf8', async function (err, data) {
+      fs.readFile(path.join(templateDir, `web5-utils.js`), 'utf8', async function (err, data) {
         if (err) {
           return console.log(err);
         }
