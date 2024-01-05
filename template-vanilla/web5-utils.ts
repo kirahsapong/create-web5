@@ -1,6 +1,6 @@
-import { Web5 } from "@web5/api/browser";
+import { Web5 } from "@web5/api";
 
-export let web5, did;
+export let web5: Web5, did: string;
 
 export async function setupWeb5() {
   try {
@@ -69,12 +69,17 @@ export async function queryRecords() {
 
 export async function configureProtocol() {
   try {
-    const { records } = await web5.dwn.protocols.configure({
+    const { protocol } = await web5.dwn.protocols.configure({
       message: {
-        protocolDefinition: {}
+        definition: {
+          protocol: "",
+          published: false,
+          types: {},
+          structure: {}
+        }
       },
     })
-    return records
+    return protocol
   } catch (e) {
     throw Error(e)
   }
@@ -84,7 +89,9 @@ export async function queryProtocols() {
   try {
     const { protocols } = await web5.dwn.protocols.query({
       message: {
-        filter: {},
+        filter: {
+          protocol: ""
+        },
       },
     })
     return protocols

@@ -22,6 +22,9 @@ Supported templates include:
 This command is for trying it out for now and will be replaced with `npm create @web5/latest`
 ```
 
+```note
+This tool includes [Vite](https://vitejs.dev/) and [Typescript](https://www.typescriptlang.org/) out-of-the-box.
+```
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md) - Fill out how to: install prereqs, build, test, run, access CI, chat, discuss, file issues
 

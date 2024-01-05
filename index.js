@@ -39,7 +39,7 @@ async function init() {
           name: 'template',
           message: 'Choose a template:',
           choices: [
-            { title: 'Vanilla JS', value: 'vanilla' }
+            { title: 'Vanilla TS', value: 'vanilla' }
           ],
         })
       }
@@ -124,7 +124,7 @@ async function init() {
     console.log(`  cd ${path.relative(cwd, root)}`)
   }
   console.log(`  npm install`)
-  console.log(`  npm run serve`)
+  console.log(`  npm run dev`)
   console.log()
 }
 

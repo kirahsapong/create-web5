@@ -1,12 +1,19 @@
 {
-  "name": "something234",
+  "name": "template-vanilla",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "serve": "npx http-server ."
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@web5/api": "^0.8.3"
+    "@web5/api": "^0.8.3",
+    "vite-plugin-node-polyfills": "^0.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
   }
 }
