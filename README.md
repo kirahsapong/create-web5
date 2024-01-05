@@ -5,7 +5,7 @@
 A project scaffolding tool for Web5. 
 
 1. Clone the repo
-2. Run `node . my-app`
+2. Run `node . ../my-app`
 3. Follow the prompts
 
 Alternatively you can pass in options to `node . my-app`.
@@ -17,15 +17,11 @@ Options:
 
 Supported templates include:
 - `template-vanilla`
+  - Includes [Vite](https://vitejs.dev/) and [Typescript](https://www.typescriptlang.org/) out-of-the-box.
 
-```note
-This command is for trying it out for now and will be replaced with `npm create @web5/latest`
-```
+Note: Command will be replaced with `npm create @web5/latest`
 
-```note
-This tool includes [Vite](https://vitejs.dev/) and [Typescript](https://www.typescriptlang.org/) out-of-the-box.
-```
-
+### TODO:
 - [CONTRIBUTING.md](./CONTRIBUTING.md) - Fill out how to: install prereqs, build, test, run, access CI, chat, discuss, file issues
 
 ## Project Resources
