@@ -103,8 +103,8 @@ async function init() {
       const pkg = require(path.join(templateDir, `package.json`))
       pkg.name = path.basename(root)
       await write(file, JSON.stringify(pkg, null, 2))
-    } else if (file === 'web5-utils.js' && (sync || endpoints)) {
-      fs.readFile(path.join(templateDir, `web5-utils.js`), 'utf8', async function (err, data) {
+    } else if (file === 'web5-config.ts' && (sync || endpoints)) {
+      fs.readFile(path.join(templateDir, `web5-config.ts`), 'utf8', async function (err, data) {
         if (err) {
           return console.log(err);
         }
