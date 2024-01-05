@@ -39,7 +39,7 @@ async function init() {
           name: 'template',
           message: 'Choose a template:',
           choices: [
-            { title: 'Vanilla TS', value: 'vanilla' }
+            { title: 'Vanilla Vite TS', value: 'vanilla-vite-ts' }
           ],
         })
       }
@@ -84,7 +84,7 @@ async function init() {
 
   const templateDir = path.join(
     __dirname,
-    `template-${template || 'vanilla'}` // -t or --template=template-vanilla
+    `template-${template || 'vanilla-vite-ts'}` // -t or --template=template-vanilla-vite-ts
   )
  
   const write = async (file, content) => {

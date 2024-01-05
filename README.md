@@ -16,7 +16,7 @@ Options:
 - `-e` or `--endpoints` to set the created DID's service endpoints. Set to any value accepted by [`Web5.connect()`](https://github.com/TBD54566975/web5-js?tab=readme-ov-file#web5connectoptions). Separate multiple endpoints with a comma (eg. `--endpoints=https://dwn.tbddev.org/dwn0,https://dwn.tbddev.org/dwn3`). Falls back to the same Web5 defaults.
 
 Supported templates include:
-- `template-vanilla`
+- `template-vanilla-vite-ts`
   - Includes [Vite](https://vitejs.dev/) and [Typescript](https://www.typescriptlang.org/) out-of-the-box.
 
 Note: Command will be replaced with `npm create @web5/latest`
