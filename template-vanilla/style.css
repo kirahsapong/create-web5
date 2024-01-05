@@ -114,6 +114,8 @@ main {
   gap: 4rem;
   margin-block-end: 2rem;
   text-align: center;
+  width: 100%;
+  max-width: 898px;
 }
 
 main > p {
@@ -131,9 +133,9 @@ main > p {
 
 #list > ul {
   list-style-type: none;
+  background: #181819;
   width: 100%;
   max-width: 898px;
-  background: #181819;
   padding: 1rem;
   margin-block: 1rem;
   border-radius: 4px;

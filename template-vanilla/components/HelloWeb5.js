@@ -10,7 +10,8 @@ export function HelloWeb5() {
       <div id="card">
           <button id="connect">Connect me to Web5</button>
           <div id="list"></div>
-        <p>Use the starter functions in <code>web5-utils.js</code> to build your Web5 app.</p>
+        <p>Use the starter functions in <code>web5-utils.js</code> to build your Web5 app. 
+        Edit the template in <code>components/HelloWeb5.js</code> to modify this page.</p>
       </div>
       <p>
         Learn more about Web5 from the <a href="https://developer.tbd.website/docs/web5/" target="_blank">TBD Developer Docs</a>
