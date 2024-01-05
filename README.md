@@ -4,20 +4,24 @@
 
 A project scaffolding tool for Web5. 
 
-```
-npx degit kirahsapong/create-web5
-```
+1. Clone the repo
+2. Run `node . my-app`
+3. Follow the prompts
 
-**Soon:**
-```
-npm create @web5/latest
-```
+Alternatively you can pass in options to `node . my-app`.
 
-Follow the prompts to finish scaffolding your Web5 project.
+Options: 
+- `-t` or `--template` to select which template to use. (eg. `--template=template-vanilla`)
+- `-s` or `--sync` to describe how often your local and remote DWNs should sync. Set to any value accepted by [`Web5.connect()`](https://github.com/TBD54566975/web5-js?tab=readme-ov-file#web5connectoptions). Falls back to the same Web5 defaults. (eg. `--sync=5m`)
+- `-e` or `--endpoints` to set the created DID's service endpoints. Set to any value accepted by [`Web5.connect()`](https://github.com/TBD54566975/web5-js?tab=readme-ov-file#web5connectoptions). Separate multiple endpoints with a comma (eg. `--endpoints=https://dwn.tbddev.org/dwn0,https://dwn.tbddev.org/dwn3`). Falls back to the same Web5 defaults.
 
 Supported templates include:
-- `vanilla`
-- `vanilla-ts`
+- `template-vanilla`
+
+```note
+This command is for trying it out for now and will be replaced with `npm create @web5/latest`
+```
+
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md) - Fill out how to: install prereqs, build, test, run, access CI, chat, discuss, file issues
 
