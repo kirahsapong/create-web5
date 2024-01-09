@@ -5,7 +5,7 @@ import minimist from 'minimist';
 import prompts from 'prompts';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'node:module';
-import { example as cloneExample } from './actions/example.js';
+import { cloneExample } from './actions/cloneExample.js';
 
 
 const argv = minimist(process.argv.slice(2));
@@ -34,9 +34,11 @@ if (argv.ex && argv.example) {
 let template = argv.t || argv.template;
 let sync = argv.s || argv.sync;
 let endpoints = argv.e?.join(', ') || argv.endpoints;
-if (example && (template || sync || endpoints)) { 
-  console.error(`Example app ${example} was selected, but isn't configurable. Other flags will be ignored.`) 
-} 
+let example = argv.ex || argv.example;
+
+if (example && (template || sync || endpoints)) {
+  console.error(`Example app ${example} was selected, but isn't configurable. Other flags will be ignored.`)
+}
 
 async function init() {
   const context = {

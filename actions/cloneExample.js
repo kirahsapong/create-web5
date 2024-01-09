@@ -1,18 +1,18 @@
 import { downloadTemplate } from 'giget';
 import fs from 'fs-extra';
 
-export async function example(project, context) {
-      console.log(`\nNow cloning ${project} example... $\n`)
-      await copyExample(project, context);
+export async function cloneExample(example, context) {
+      console.log(`\nNow cloning ${example} example... $\n`)
+      await copyExample(example, context);
 }
 
-export function getExampleTarget(project) {
+export function getExampleTarget(example) {
     const pathToExamples = 'TBD54566975/developer.tbd.website/examples/tutorials/';
-    return `github:${pathToExamples}${project}`;
+    return `github:${pathToExamples}${example}`;
 }
 
-export default async function copyExample(project, context) {
-    const exampleTarget = getExampleTarget(project);
+export default async function copyExample(example, context) {
+    const exampleTarget = getExampleTarget(example);
     //Copy
     try {
         await downloadTemplate(exampleTarget, {
@@ -38,7 +38,7 @@ export default async function copyExample(project, context) {
         }
 
         if (err.message.includes('404')) {
-            throw new Error(`Example ${project} does not exist!`);
+            throw new Error(`Example ${example} does not exist!`);
         } else {
             throw new Error(err.message);
         }
@@ -46,6 +46,6 @@ export default async function copyExample(project, context) {
 
     // `giget` doesn't throw error if the example route is invalide. So we check if the directory is empty.
     if (fs.readdirSync(context.cwd).length === 0) {
-        throw new Error(`Example ${project} is empty!`);
+        throw new Error(`Example ${example} is empty!`);
     }
 }
