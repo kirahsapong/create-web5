@@ -15,7 +15,7 @@ export default async function copyExample(project, context) {
     const exampleTarget = getExampleTarget(project);
     //Copy
     try {
-        const response = await downloadTemplate(exampleTarget, {
+        await downloadTemplate(exampleTarget, {
             force: true,
             provider: 'github',
             cwd: context.cwd,

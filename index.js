@@ -34,7 +34,9 @@ if (argv.ex && argv.example) {
 let template = argv.t || argv.template;
 let sync = argv.s || argv.sync;
 let endpoints = argv.e?.join(', ') || argv.endpoints;
-let example = argv.ex || argv.example;
+if (example && (template || sync || endpoints)) { 
+  console.error(`Example app ${example} was selected, but isn't configurable. Other flags will be ignored.`) 
+} 
 
 async function init() {
   const context = {
