@@ -1,10 +1,11 @@
 import { setupWeb5, web5, did } from '../../web5-config.js';
 import { queryRecords } from '../web5-utils.js';
+import TBDLogo from '../tbd.svg';
 
 export function HelloWeb5() {
   return `
     <header>
-      <img width="192" src="../tbd.svg" class="logo" alt="TBD yellow curly braces icon" />
+      <img width="192" src=${TBDLogo} class="logo" alt="TBD yellow curly braces icon" />
       <h1>Hello, <span>Web5!</span></h1>
     </header>
     <main>
