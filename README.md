@@ -14,7 +14,7 @@ Options:
 - `-t` or `--template` to select which template to use. (eg. `--template=template-vanilla`)
 - `-s` or `--sync` to describe how often your local and remote DWNs should sync. Set to any value accepted by [`Web5.connect()`](https://github.com/TBD54566975/web5-js?tab=readme-ov-file#web5connectoptions). Falls back to the same Web5 defaults. (eg. `--sync=5m`)
 - `-e` or `--endpoints` to set the created DID's service endpoints. Set to any value accepted by [`Web5.connect()`](https://github.com/TBD54566975/web5-js?tab=readme-ov-file#web5connectoptions). Separate multiple endpoints with a comma (eg. `--endpoints=https://dwn.tbddev.org/dwn0,https://dwn.tbddev.org/dwn3`). Falls back to the same Web5 defaults.
-- `ex` or `--example` to use existing example projects from the [web5 documentation](https://github.com/TBD54566975/developer.tbd.website/tree/main/examples/tutorials). Accepts values that match the folder name of the projects e.g run `node . --example book-reviews ../my-app`
+- `-ex` or `--example` to use existing example projects from the [web5 documentation](https://github.com/TBD54566975/developer.tbd.website/tree/main/examples/tutorials). Accepts values that match the folder name of the projects e.g run `node . --example book-reviews ../my-app`
 
 Supported templates include:
 - `template-vanilla-vite-ts`
