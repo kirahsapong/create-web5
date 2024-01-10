@@ -5,7 +5,7 @@
 A project scaffolding tool for Web5.
 
 1. Clone the repo
-2. Run `node . ../my-app`
+2. Run `npm install` and `node . ../my-app`
 3. Follow the prompts
 
 Alternatively you can pass in options to `node . my-app`.
